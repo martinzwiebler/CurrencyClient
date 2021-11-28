@@ -43,6 +43,6 @@ class CurrencyClient:
         # All cache items learn the new interval.
         self.time_in_seconds = datetime.timedelta(days, seconds, microseconds, milliseconds, minutes, hours,
                                                   weeks).total_seconds()
-        new_cache = {}
+
         for currency in self.cache:
             self.cache[currency].set_interval(self.time_in_seconds)
